@@ -1,0 +1,21 @@
+<!-- <div ng-app="myApp" ng-controller="customersCtrl"> -->
+
+        <table>
+            <thead>
+            <tr>
+              <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr mdbTableCol *ngFor="let d of directDebitService.directDebitsList">
+              <td>{{d.name}}</td>
+              <td>{{d.sum}}</td>
+              <td>{{d.date}}</td>
+            </tr>
+            <button>delete</button>
+          </tbody>
+        </table>
+        <app-create-directdebit></app-create-directdebit>
+    <!-- <h1 class="total">Total payments: {{ sumOfDirectDebit()}}</h1> -->
+        
+        <!-- </div> -->

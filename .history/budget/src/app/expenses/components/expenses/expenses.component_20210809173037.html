@@ -1,0 +1,21 @@
+<div class="main">
+    <h1>EXPENSES</h1>
+    <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a routerLink="/Direct-Debit" (click)="createdirectDebit()" >Direct Debit</a>
+            <a routerLink="/Credit-Card">Credit Card</a>
+            <a href="#about">About</a>
+          </div>
+          <div  >
+              <table>
+                  <tr *ngFor="let payment of DDList">
+                    <td>{{ payment.name }}</td>
+                    <td>{{ payment.sum }}</td>
+                    <td>{{ payment.date }}</td>
+                  </tr>
+                </table>
+
+              <router-outlet></router-outlet>
+            </div>
+
+</div>

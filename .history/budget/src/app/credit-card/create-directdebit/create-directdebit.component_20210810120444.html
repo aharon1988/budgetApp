@@ -1,0 +1,13 @@
+<p>create-directdebit works!</p>
+<form [formGroup]="directDebit"(ngSubmit)="onSubmit()">
+
+        <label for="name"> Name: </label>
+        <input id="first-name" type="text" formControlName="name">   
+        
+        <label for="last-name">Sum: </label>
+        <input id="last-name" type="text" formControlName="sum">
+        <label for="last-name">Date: </label>
+        <input id="last-name" type="text" formControlName="date">
+        <p>Complete the form to enable button.</p>
+  <button type="submit" >Submit</button>
+      </form>

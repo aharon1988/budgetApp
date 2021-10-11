@@ -1,0 +1,20 @@
+<form [formGroup]="directDebit"(ngSubmit)="onSubmit()"novalidate>
+
+        <label for="name"> Name: </label>
+        <input id="first-name" type="text" formControlName="name">   
+        <span *ngIf="getControl.name.touched && getControl.name.invalid" class="text-danger">
+              <span *ngIf="getControl.name.errors.required">Name is required.</span>
+              <span *ngIf="getControl.name.errors?.minlength">Minimum 4 character are required.</span>
+
+
+        </span>
+
+        
+        <label for="last-name">Sum: </label>
+        <input id="last-name" type="number" formControlName="sum">
+        <label for="last-name">Date: </label>
+        <input id="last-name" type="text" formControlName="date">
+        <p>Complete the form to enable button.</p>
+  <button type="submit" >Submit</button>
+<h2>{{already}}</h2>
+      </form>
